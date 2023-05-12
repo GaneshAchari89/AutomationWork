@@ -1,14 +1,10 @@
 import pytest
+
+from UI.pageObjects.CommonUtils import CommonUtils
 from UI.pageObjects.LoginPage import LoginPage
-from UI.utilities.readProperties import ReadConfig
-from UI.utilities.customLogger import LogGenerator
 
 
-class Test_0001_Login:
-    baseUrl = ReadConfig.getBaseUrl()
-    username = ReadConfig.getUsername()
-    password = ReadConfig.getPassword()
-    logger = LogGenerator.generateLogger()
+class Test_0001_Login(CommonUtils):
 
     @pytest.mark.sanity
     @pytest.mark.regression

@@ -1,14 +1,13 @@
 import time
 import pytest
+
+from UI.pageObjects.CommonUtils import CommonUtils
 from UI.pageObjects.LoginPage import LoginPage
-from UI.utilities.readProperties import ReadConfig
-from UI.utilities.customLogger import LogGenerator
 from UI.utilities import excelUtil
 
 
-class Test_0002_ddt_Login:
-    baseUrl = ReadConfig.getBaseUrl()
-    logger = LogGenerator.generateLogger()
+class Test_0002_ddt_Login(CommonUtils):
+
     path = "/Users/ganeshachari/AutomationWork/UI/testData/LoginData.xlsx"
 
     @pytest.mark.smoke

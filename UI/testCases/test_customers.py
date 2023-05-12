@@ -1,18 +1,11 @@
 import pytest
 
-from UI.utilities.customLogger import LogGenerator
-from UI.utilities.readProperties import ReadConfig
+from UI.pageObjects.CommonUtils import CommonUtils
 from UI.pageObjects.LoginPage import LoginPage
 from UI.pageObjects.CustomersPage import CustomerPage
 
 
-class Test_0002_Customers:
-    baseUrl = ReadConfig.getBaseUrl()
-    username = ReadConfig.getUsername()
-    password = ReadConfig.getPassword()
-    logger = LogGenerator.generateLogger()
-    search_email = ReadConfig.getEmail()
-
+class Test_0002_Customers(CommonUtils):
     @pytest.mark.smoke
     @pytest.mark.regression
     def test_customers_search(self, setUp):
