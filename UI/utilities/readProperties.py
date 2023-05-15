@@ -1,7 +1,8 @@
 import configparser
 
 config = configparser.RawConfigParser()
-config.read("/Users/ganeshachari/AutomationWork/UI/configuration/config.ini")
+config_path = "../configuration/config.ini"
+config.read(config_path)
 
 
 class ReadConfig:
@@ -21,3 +22,5 @@ class ReadConfig:
     @staticmethod
     def getEmail():
         return config.get('common info', 'search_email')
+
+

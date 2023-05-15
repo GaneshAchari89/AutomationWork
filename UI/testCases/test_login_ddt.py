@@ -1,14 +1,13 @@
 import time
 import pytest
 
-from UI.pageObjects.CommonUtils import CommonUtils
+from UI.pageObjects.CommonElements import CommonElements
 from UI.pageObjects.LoginPage import LoginPage
 from UI.utilities import excelUtil
 
 
-class Test_0002_ddt_Login(CommonUtils):
-
-    path = "/Users/ganeshachari/AutomationWork/UI/testData/LoginData.xlsx"
+class Test_0002_ddt_Login(CommonElements):
+    path = "../testData/LoginData.xlsx"
 
     @pytest.mark.smoke
     def test_login_ddt(self, setUp):

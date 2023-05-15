@@ -1,11 +1,12 @@
 import pytest
 
-from UI.pageObjects.CommonUtils import CommonUtils
+from UI.pageObjects.CommonElements import CommonElements
 from UI.pageObjects.LoginPage import LoginPage
 from UI.pageObjects.CustomersPage import CustomerPage
 
 
-class Test_0002_Customers(CommonUtils):
+class Test_0002_Customers(CommonElements):
+
     @pytest.mark.smoke
     @pytest.mark.regression
     def test_customers_search(self, setUp):
@@ -31,7 +32,7 @@ class Test_0002_Customers(CommonUtils):
             self.logger.info("**************** Customer search test case is passed ****************")
             self.driver.close()
         else:
-            self.driver.save_screenshot("/Users/ganeshachari/AutomationWork/UI/screenshots/" + "test_customers_search.png")
+            self.driver.save_screenshot(self.screen_shots_path + "test_customers_search.png")
             self.driver.close()
             self.logger.error("**************** Customer search Title test case is failed ****************")
             assert False

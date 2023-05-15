@@ -1,10 +1,10 @@
 import pytest
 
-from UI.pageObjects.CommonUtils import CommonUtils
+from UI.pageObjects.CommonElements import CommonElements
 from UI.pageObjects.LoginPage import LoginPage
 
 
-class Test_0001_Login(CommonUtils):
+class Test_0001_Login(CommonElements):
 
     @pytest.mark.sanity
     @pytest.mark.regression
@@ -20,7 +20,7 @@ class Test_0001_Login(CommonUtils):
             self.logger.info("**************** Home Page Title test case is passed ****************")
             self.driver.close()
         else:
-            self.driver.save_screenshot("/Users/ganeshachari/AutomationWork/UI/screenshots/" + "test_homePageTitle.png")
+            self.driver.save_screenshot(self.screen_shots_path + "test_homePageTitle.png")
             self.driver.close()
             self.logger.error("**************** Home Page Title test case is failed ****************")
             assert False
@@ -40,7 +40,7 @@ class Test_0001_Login(CommonUtils):
             self.logger.info("**************** Login test case is passed ****************")
             self.driver.close()
         else:
-            self.driver.save_screenshot("/Users/ganeshachari/AutomationWork/UI/screenshots/" + "test_login.png")
+            self.driver.save_screenshot(self.screen_shots_path + "test_login.png")
             self.logger.error("**************** Login test case is failed ****************")
             self.driver.close()
             assert False
