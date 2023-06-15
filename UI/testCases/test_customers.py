@@ -2,7 +2,7 @@ import pytest
 
 from UI.pageObjects.CommonElements import CommonElements
 from UI.pageObjects.LoginPage import LoginPage
-from UI.pageObjects.CustomersPage import CustomerPage
+from UI.pageObjects.CustomersPage import CustomersPage
 
 
 class Test_0002_Customers(CommonElements):
@@ -21,7 +21,7 @@ class Test_0002_Customers(CommonElements):
         self.loginPage.setPassword(self.password)
         self.loginPage.clickLogin()
 
-        self.customer = CustomerPage(self.driver)
+        self.customer = CustomersPage(self.driver)
         self.customer.navigate_to_customers()
         self.customer.search_email(self.search_email)
         self.customer.click_search()

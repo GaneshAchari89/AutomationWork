@@ -5,7 +5,7 @@ from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.wait import WebDriverWait
 
 
-class CustomerPage:
+class CustomersPage:
     link_main_customers_xpath = "//div[@class='os-content']//ul[contains(@class,nav-sidebar)]//i[contains(@class,'user')]//following-sibling::p[contains(text(),'Customers')]"
     link_sub_customers_xpath = "//div[@class='os-content']//ul[contains(@class,nav-sidebar)]//a[contains(@href,'List')]//following-sibling::p[contains(text(),'Customers')]"
     text_search_email_xpath = "//input[@id='SearchEmail']"
